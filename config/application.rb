@@ -13,6 +13,8 @@ module ChatApp2
     config.i18n.default_locale = :ja
     config.time_zone = 'Tokyo'
     config.generators do |g|
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
+  
       g.stylesheets false
       g.javascripts false
       g.helper false
